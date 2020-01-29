@@ -1,0 +1,19 @@
+{
+  "name": "sidejobs",
+  "version": "1.0.0",
+  "description": "SideJobs Project 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertmoore40/SideJobs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertmoore40/SideJobs/issues"
+  },
+  "homepage": "https://github.com/robertmoore40/SideJobs#readme"
+}
