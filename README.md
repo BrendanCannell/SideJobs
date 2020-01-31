@@ -2,7 +2,8 @@
 SideJobs Project 3
 
 Purpose:
-Sidejobs is a full-stack app which is focused on offering services with ratings. Users will be able to both post services with per hour cost, as well as respond to service posts with an internal chat system. 
+Sidejobs is a full-stack app which is focused on offering services with ratings. Users will be able to both post services with per hour cost, as well as respond to service posts with an internal chat system. This is useful because common sites/apps like craigslist offer services, but don't allow users to rate the services. This adds that additional functionality which gives services more credibility and public trust.
+
 
 Stage I(MVC):
 Users are able to login and post a service with their email address. Users are able to make multiple posts with different services.
@@ -29,3 +30,6 @@ Gabriel Mixon: User Authentication, 2 Extra Technologies, Debugging Front and Ba
 Lillian Portenier: Front End, React, Routers, 
 
 Robert Moore: MongoDB, Mongoose, Node, Express, Back-End
+
+
+Extra Technologies:
