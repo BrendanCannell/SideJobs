@@ -47,6 +47,97 @@ const jobsSeed = [
     costPerHour:"30",
     city:"Raleigh",
     date: new Date(Date.now())
+  },
+  {
+    id: "4",
+    firstName: "Chistopher",
+    lastName: "Hitchens",
+    service:"Writing Lessons",
+    description:"Learn to write with a great polemicist",
+    phoneNumber:"2222222222",
+    email:"sample4@gmail.com",
+    zipCode:"27617",
+    costPerHour:"200",
+    city:"London",
+    date: new Date(Date.now())
+  },
+  {
+    id: "5",
+    firstName: "Norm",
+    lastName: "MacDonald",
+    service:"Humor Lessons",
+    description:"Learn to make jokes and laugh",
+    phoneNumber:"2222222222",
+    email:"sample5@gmail.com",
+    zipCode:"27617",
+    costPerHour:"10",
+    city:"New York",
+    date: new Date(Date.now())
+  },
+  {
+    id: "6",
+    firstName: "Michael",
+    lastName: "Baden",
+    service:"Medical Examination Lessons",
+    description:"Learn how someone died!",
+    phoneNumber:"2222222222",
+    email:"sample6@gmail.com",
+    zipCode:"27617",
+    costPerHour:"300",
+    city:"New York",
+    date: new Date(Date.now())
+  },
+  {
+    id: "7",
+    firstName: "Frasier",
+    lastName: "Crane",
+    service:"Psychiatry",
+    description:"Improve yourself and make a change",
+    phoneNumber:"2222222222",
+    email:"sample3@gmail.com",
+    zipCode:"27617",
+    costPerHour:"300",
+    city:"Seattle",
+    date: new Date(Date.now())
+  },
+  {
+    id: "8",
+    firstName: "Nurse",
+    lastName: "Ratchet",
+    service:"Home Care",
+    description:"Home care for family members",
+    phoneNumber:"2222222222",
+    email:"sample3@gmail.com",
+    zipCode:"27617",
+    costPerHour:"100",
+    city:"Cincinatti",
+    date: new Date(Date.now())
+  },
+  {
+    id: "9",
+    firstName: "Andy",
+    lastName: "Dusfresne",
+    service:"Digging Lessons",
+    description:"Learn to dig through walls and pipes",
+    phoneNumber:"2222222222",
+    email:"sample3@gmail.com",
+    zipCode:"27617",
+    costPerHour:"12",
+    city:"Augusta",
+    date: new Date(Date.now())
+  },
+  {
+    id: "10",
+    firstName: "Daniel",
+    lastName: "Negreanu",
+    service:"Poker Lessons",
+    description:"Learn when to hold em and when to fold em!",
+    phoneNumber:"2222222222",
+    email:"sample3@gmail.com",
+    zipCode:"27617",
+    costPerHour:"450",
+    city:"Las Vegas",
+    date: new Date(Date.now())
   }
 ];
 
