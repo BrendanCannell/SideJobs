@@ -30,8 +30,8 @@ const jobsSeed = [
     description:"Learn to play the violin, not so free of charge!",
     phoneNumber:"1111111111",
     email:"sample2@gmail.com",
-    zipCode:"27713",
-    costPerHour:"100",
+    zipCode:"27712",
+    costPerHour:"50",
     city:"Durham",
     date: new Date(Date.now())
   },
