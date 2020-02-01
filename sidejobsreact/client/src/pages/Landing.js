@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Text} from 'rebass';
+import {Box, Text, Button} from 'rebass';
 import { Label, Input } from '@rebass/forms'
 import NavBar from '../components/NavBar/index'
 import Footer from '..//components/Footer/index'
@@ -10,12 +10,12 @@ const InputContainerStyle = {
     marginLeft: '25px',
     marginTop: '100px',
 }
-const InputFormStyle = {
-   
+const SearchButtonStyle = {
+   backgroundColor: '#1B1F3B',
+
 }
 const inputBarStyle = {
     borderRadius: '7px',
-
 }
 
 
@@ -24,7 +24,7 @@ function Landing(props) {
         <div>
             <NavBar />
             <div style={InputContainerStyle}>
-                <Box style={InputFormStyle}
+                <Box
                     sx={{
                         alignContent: 'center'
                     }}>
@@ -42,17 +42,18 @@ function Landing(props) {
                     <Input style={inputBarStyle}
                         sx={{
                             p: 2,
-
                             }}
-
                         id='search'
                         name='search'
                         type='text'
                         placeholder=''
                     />
+                    <Button style={SearchButtonStyle}  mr={2}>Search</Button>
+
                 </Box>
+
             </div>
         </div>
-    )
-}
+    );
+};
 export default Landing;

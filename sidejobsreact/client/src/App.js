@@ -14,9 +14,9 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route path="/">
+      {/* <Route path="/">
           <Landing />
-        </Route>
+        </Route> */}
         <Route path="/Landing">
           <Landing />
         </Route>
