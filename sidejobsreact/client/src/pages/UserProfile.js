@@ -1,11 +1,11 @@
 import React from "react";
 
-$(document).ready(function() {
+// $(document).ready(function() {
     
-    $.get("/UserProfile").then(function(data) {
-      $(".member-name").text(data.email);
-    });
-  });
+//     $.get("/UserProfile").then(function(data) {
+//       $(".member-name").text(data.email);
+//     });
+//   });
 
 function UserProfile() {
   return(
