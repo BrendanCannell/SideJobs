@@ -7,7 +7,7 @@ Sidejobs is a full-stack app which is focused on offering services with ratings.
 
 Present Progress: Boilerplate created, seeds created, color scheme chosen, user authentication system chosen
 
-Stage I(MVC): February 8th
+Stage I(MVP): February 8th
 Users are able to login and post a service with their email address. Users are able to make multiple posts with different services. App deployed to Heroku. Mini-presentation completed.
 
 Stage II: February 15th
