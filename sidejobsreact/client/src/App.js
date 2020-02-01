@@ -1,6 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
+import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Results from "./pages/Results.js";
+import SignIn from "./pages/SignIn.js";
+import SignUp from "./pages/SignUp.js";
+import UserProfile from "./pages/UserProfile.js";
+
+
 
 import Landing from './pages/Landing';
 import Results from './pages/Results';
@@ -27,7 +35,7 @@ function App() {
           {/* <Route exact path="/jobs/:id" component={Job} /> */}
           <Route component={NoMatch} />
         </Switch>
-      </div>
+      </div>      
     </Router>
   );
 }
