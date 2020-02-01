@@ -1,11 +1,18 @@
 import React from "react";
+import {
+    Box,
+    Flex,
+    Heading,
+    Text,
+    Button,
+    Link,
+    Image,
+    Card,
+} from 'rebass';
+import { ThemeProvider } from 'emotion-theming'
 
-function SignUp() {
-    return(
-        <div>
-            <h1>SignUp</h1>
-        </div>
-    )
+
+function SignUp(props) {
+
 }
-
 export default SignUp;
