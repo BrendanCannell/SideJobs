@@ -8,7 +8,6 @@ import './style.css'
 function Landing(props) {
     return (
         <div>
-            <NavBar />
             <div className='InputContainerStyle'>
                 <Box
                     sx={{

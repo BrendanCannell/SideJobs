@@ -19,9 +19,6 @@ import './style.css'
 function Results(props) {
     return (
         <div>
-
-            <NavBar />
-
             <Card>
 
                 <div className='ResultCardStyle'>

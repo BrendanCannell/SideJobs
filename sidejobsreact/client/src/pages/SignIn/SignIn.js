@@ -45,7 +45,6 @@ import './style.css'
 function SignIn(props) {
     return (
         <div>
-            <NavBar />
             <div className='SignInContainer'>
                 <div className='SignInCard'>
                     <Card>

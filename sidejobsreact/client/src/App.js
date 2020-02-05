@@ -1,21 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Landing from "./pages/Landing/Landing";
-import Results from "./pages/Results/Results.js";
-import SignIn from "./pages/SignIn/SignIn.js";
 import SignUp from "./pages/SignUp/SignUp.js";
-import UserProfile from "./pages/UserProfile.js";
-
-
-
 import Landing from './pages/Landing/Landing';
 import Results from './pages/Results/Results';
 import SignIn from './pages/SignIn/SignIn';
-import SignOut from './pages/SignOut/SignOut';
+// import SignOut from './pages/SignOut/SignOut.js';
 import UserProfile from './pages/UserProfile';
-import Nav from "./components/Nav";
+import Nav from "./components/Nav/index";
 
 
 
@@ -27,17 +19,18 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/signin" component={SignIn} />
-          <Route exact path="/signout" component={SignOut} />
+          {/* <Route exact path="/signout" component={SignOut} /> */}
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/userprofile" component={UserProfile} />
 
           {/* <Route exact path="/userprofile/id" component={UserProfile} /> */}
-          {/* <Route exact path="/jobs" component={Results} /> */}
+          <Route exact path="/jobs" component={Results} />
           {/* <Route exact path="/jobs/:id" component={Job} /> */}
-          <Route component={NoMatch} />
+          {/* <Route component={NoMatch} /> */}
         </Switch>
       </div>      
     </Router>
-  );
+  )
 }
 
 export default App;
