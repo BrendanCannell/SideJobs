@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/robertmoore40/SideJobs/issues"
   },
-  "homepage": "https://github.com/robertmoore40/SideJobs#readme"
+  "homepage": "https://github.com/robertmoore40/SideJobs#readme",
+  "dependencies": {
+   
+  }
 }

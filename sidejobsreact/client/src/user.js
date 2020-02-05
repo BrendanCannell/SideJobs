@@ -1,25 +1,20 @@
-var bcrypt = require("bcryptjs");
-module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("User", {
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
-  });
-  User.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
-  };
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
 
-  User.addHook("beforeCreate", function(user) {
-    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-  });
-  return User;
-};
+const userSchema = new Schema({
+    id: { type: Number, required: true},
+    firstName: { type: String, required: true},
+    lastName: { type: String, required: true},
+    phoneNumber: { type: Number},
+    email: { type: String, required: true},
+    zipCode: { type: String},
+    city: { type: String}
+})
+
+const User = mongoose.model('User', userSchema);
+
+UserSchema.plugin(passportLocalMongoose);
+
+module.exports = Job;

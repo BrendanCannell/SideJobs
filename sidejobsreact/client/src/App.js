@@ -1,12 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Results from "./pages/Results.js";
 import SignIn from "./pages/SignIn.js";
 import SignUp from "./pages/SignUp.js";
 import UserProfile from "./pages/UserProfile.js";
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+mongoose.connect('mongodb://localhost/node-auth')
+  .then(() => console.log('connection succesful'))
+  .catch((err) => console.error(err));
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 
 
@@ -35,7 +43,7 @@ function App() {
           {/* <Route exact path="/jobs/:id" component={Job} /> */}
           <Route component={NoMatch} />
         </Switch>
-      </div>      
+      </div>
     </Router>
   );
 }
