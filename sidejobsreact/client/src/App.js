@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
@@ -10,29 +10,32 @@ import UserProfile from "./pages/UserProfile.js";
 
 
 
+import Landing from './pages/Landing/Landing';
+import Results from './pages/Results/Results';
+import SignIn from './pages/SignIn/SignIn';
+import SignOut from './pages/SignOut/SignOut';
+import UserProfile from './pages/UserProfile';
+import Nav from "./components/Nav";
+
+
+
 function App() {
   return (
     <Router>
-      <Switch>
-      {/* <Route path="/">
-          <Landing />
-        </Route> */}
-        <Route path="/Landing">
-          <Landing />
-        </Route>
-        <Route path="/Results">
-          <Results />
-        </Route>
-        <Route path="/SignIn">
-          <SignIn />
-        </Route>
-        <Route path="/SignUp">
-          <SignUp />
-        </Route>
-        <Route path="/UserProfile">
-          <UserProfile />
-        </Route>
-      </Switch>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/signout" component={SignOut} />
+          <Route exact path="/userprofile" component={UserProfile} />
+
+          {/* <Route exact path="/userprofile/id" component={UserProfile} /> */}
+          {/* <Route exact path="/jobs" component={Results} /> */}
+          {/* <Route exact path="/jobs/:id" component={Job} /> */}
+          <Route component={NoMatch} />
+        </Switch>
+      </div>      
     </Router>
   );
 }
