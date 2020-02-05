@@ -2,10 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Landing from "./pages/Landing";
-import Results from "./pages/Results.js";
-import SignIn from "./pages/SignIn.js";
-import SignUp from "./pages/SignUp.js";
+import Landing from "./pages/Landing/Landing";
+import Results from "./pages/Results/Results.js";
+import SignIn from "./pages/SignIn/SignIn.js";
+import SignUp from "./pages/SignUp/SignUp.js";
 import UserProfile from "./pages/UserProfile.js";
 
 

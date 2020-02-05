@@ -9,7 +9,9 @@ const NavBarStyle = {
     padding: '8px',
     paddingTop: '1px', 
     paddingBottom: '1px',
-    backgroundColor: '#EA0E96',
+    // font: 'montserrat'
+    // backgroundColor: '#EA0E96',
+    backgroundColor: '#E8406D',
     fontSide: '50px'
 };
 const SignUpButtnStyle = {

@@ -1,29 +1,15 @@
 import React from "react";
 import {Box, Text, Button} from 'rebass';
 import { Label, Input } from '@rebass/forms'
-import NavBar from '../components/NavBar/index'
-import Footer from '..//components/Footer/index'
-
-// import { ThemeProvider } from 'emotion-theming'
-const InputContainerStyle = {
-    marginRight: '25px',
-    marginLeft: '25px',
-    marginTop: '100px',
-}
-const SearchButtonStyle = {
-   backgroundColor: '#1B1F3B',
-
-}
-const inputBarStyle = {
-    borderRadius: '7px',
-}
-
+import NavBar from '../../components/NavBar/index'
+import Footer from '../../components/Footer/index'
+import './style.css'
 
 function Landing(props) {
     return (
         <div>
             <NavBar />
-            <div style={InputContainerStyle}>
+            <div className='InputContainerStyle'>
                 <Box
                     sx={{
                         alignContent: 'center'
@@ -39,7 +25,7 @@ function Landing(props) {
 
                     }}>Search</Text>
 
-                    <Input style={inputBarStyle}
+                    <Input className='inputBarStyle'
                         sx={{
                             p: 2,
                             }}
@@ -48,7 +34,7 @@ function Landing(props) {
                         type='text'
                         placeholder=''
                     />
-                    <Button style={SearchButtonStyle}  mr={2}>Search</Button>
+                    <Button className='SearchButtonStyle'  mr={2}>Search</Button>
 
                 </Box>
 
