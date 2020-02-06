@@ -1,8 +1,7 @@
 import React from "react";
 import {Box, Text, Button} from 'rebass';
-import { Label, Input } from '@rebass/forms'
-import NavBar from '../../components/NavBar/index'
-import Footer from '../../components/Footer/index'
+import {Input } from '@rebass/forms'
+// import Footer from '../../components/Footer/index'
 import './style.css'
 
 function Landing(props) {
