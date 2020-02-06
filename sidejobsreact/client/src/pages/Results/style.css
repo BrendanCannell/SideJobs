@@ -1,0 +1,42 @@
+
+  .ResultCardStyle {
+    margin: 10px 10px 20px 10px;
+    padding: 15px 10px 15px 10px;
+    border: solid grey;
+    border-width: 1px;    
+    border-radius: 3px;
+    color: #292F36;
+    box-shadow: 10px;
+    /* background-color: #F7FFF7; */
+  }
+  .CardImageStyle{
+      height: 100px;
+      width: 150px;
+  }
+  .CardHeaderInfoFloat{
+      display: flex;
+  }
+  .ResultsHeaderInfoFloat{
+    display: flex;
+  }
+  .ZipAndPriceStyle{
+    display: flex;
+    margin-left: 12px;
+}
+  .CardTitleStyle{
+    align-self: auto;
+    padding: 12px;
+  }
+  .CardTextStyle {
+    padding-top: 5px;
+}
+  .CardZipcodeStyle{
+    padding-left: 20px;
+    color: grey;
+  }
+
+  .CardPriceStyle {
+    color: black;
+    font-weight: 500;
+  }
+ 
