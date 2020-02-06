@@ -1,8 +1,7 @@
 import React from "react";
 import { Card, Text, Button } from 'rebass';
-import { Label, Input } from '@rebass/forms'
-import NavBar from '../../components/NavBar/index'
-import Footer from '../../components/Footer/index'
+import { Input } from '@rebass/forms'
+// import Footer from '../../components/Footer/index'
 import './style.css'
 // $(document).ready(function() {
 //     // var signUpForm = $("form.signup");
@@ -45,7 +44,6 @@ import './style.css'
 function SignUp(props) {
   return (
     <div>
-      <NavBar />
       <div className='SignUpContainer'>
         <div className='SignUpCard'>
           <Card>

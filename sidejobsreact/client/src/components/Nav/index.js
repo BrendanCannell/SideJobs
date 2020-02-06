@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-    Flex, Text, Box, Link, Button
+    Flex, Text, Box, Button
 } from 'rebass';
-import SignUpButton from './';
+// import SignUpButton from './';
 
 
 const NavBarStyle = {
