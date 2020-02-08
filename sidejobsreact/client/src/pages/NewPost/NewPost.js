@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "rebass";
 import "./style.css";
-// import { Input } from "@rebass/forms";
+import { Input } from "@rebass/forms";
 
 function handleServiceInput(e) {
   this.setState({ firstNameInput: e.target.value });
