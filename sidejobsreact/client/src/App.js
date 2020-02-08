@@ -10,9 +10,6 @@ import NewPost from './pages/NewPost/NewPost';
 import UserProfile from './pages/UserProfile';
 import Nav from "./components/Nav/index";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
 function App() {
   return (
     <Router>
@@ -24,7 +21,6 @@ function App() {
           {/* <Route exact path="/signout" component={SignOut} /> */}
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/userprofile" component={UserProfile} />
-
           {/* <Route exact path="/userprofile/id" component={UserProfile} /> */}
           <Route exact path="/jobs" component={Results} />
           <Route exact path="/form" component={NewPost} />
@@ -36,5 +32,4 @@ function App() {
     </Router>
   )
 }
-
 export default App;

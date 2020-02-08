@@ -2,12 +2,12 @@ const db = require("../models");
 
 module.exports = {
   findAll: function(req, res) {
-    console.log("inside find all")
+    // console.log("inside find all")
     db.Job
       .find()
       .sort({ date: -1 })
       .then(dbJob => {
-        console.log(dbJob, "dbJOb");
+        // console.log(dbJob, "dbJOb");
         res.json(dbJob)
       })
       .catch(err => res.status(422).json(err));

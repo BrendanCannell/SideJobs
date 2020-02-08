@@ -1,7 +1,7 @@
 {
-  "name": "sidejobsreact",
+  "name": "sidejobs",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "SideJobs Project 3",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -20,11 +20,15 @@
   },
   "homepage": "https://github.com/robertmoore40/SideJobs#readme",
   "dependencies": {
+    "mongoose": "^5.8.11",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "passport-mongoose": "0.0.1",
     "concurrently": "^5.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.8.11"
+    "if-env": "^1.0.4"
   }
 }
