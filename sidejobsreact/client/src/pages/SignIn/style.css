@@ -1,0 +1,26 @@
+.SignUpContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignUpCard {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.SignUpText {
+    font-weight: 700;
+    text-align: center;
+}
+.SignUpInput{
+    border-radius: 3px;
+}
+.SignUpButton{
+    background-color: #1B1F3B;
+
+}
