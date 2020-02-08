@@ -13,20 +13,20 @@ function handleServiceInput(e) {
   this.setState({ zipCodeInput: e.target.value });
   this.setState({ cityInput: e.target.value });
 
-  handleClearing();
+//   handleClearing();
   handleTerminalOutputs();
 }
 
-function handleClearing(e) {
-  this.firstNameInput.value = "";
-  this.lastNameInput.value = "";
-  this.serviceInput.value = "";
-  this.descriptionInput.value = "";
-  this.phoneNumberInput.value = "";
-  this.emailInput.value = "";
-  this.zipCodeInput.value = "";
-  this.cityInput.value = "";
-}
+// function handleClearing(e) {
+//   this.firstNameInput.value = "";
+//   this.lastNameInput.value = "";
+//   this.serviceInput.value = "";
+//   this.descriptionInput.value = "";
+//   this.phoneNumberInput.value = "";
+//   this.emailInput.value = "";
+//   this.zipCodeInput.value = "";
+//   this.cityInput.value = "";
+// }
 
 function handleTerminalOutputs() {
     console.log("First Name is: " + this.state.firstNameInput);
@@ -88,9 +88,9 @@ function NewPost(props) {
       <Button onClick={handleServiceInput} variant="primary">
         Enter
       </Button>
-      <Button onClick={handleClearing} variant="primary">
+      {/* <Button onClick={handleClearing} variant="primary">
         Clear All
-      </Button>
+      </Button> */}
     </div>
   );
 }
