@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios';
-import API from '../../utils'
+import API from '../../utils/API';
 // import { Card, Image, Heading, Text } from "rebass";
 import './style.css';
 
@@ -20,17 +19,16 @@ class Results extends Component {
         this.loadJobs();
     };
     loadJobs(){
-
         API.getJobs()
             // line above needs proper url for search page, parocees.env? /jobs? port number?
             .then(res => {
             this.setState({ Jobs: res.data });
-            // console.log(Jobs)
+            console.log(this.state.Jobs)
         }).catch(function (err) {
             console.log(err);
         })
     }
-    jobResults() {
+    render() {
         return this.state.Jobs.map((data, i) => {
             return (
                 <div>
