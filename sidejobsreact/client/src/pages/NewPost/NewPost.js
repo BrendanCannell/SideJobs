@@ -12,19 +12,33 @@ function handleServiceInput(e) {
   this.setState({ emailInput: e.target.value });
   this.setState({ zipCodeInput: e.target.value });
   this.setState({ cityInput: e.target.value });
+
+  handleClearing();
+  handleTerminalOutputs();
+}
+
+function handleClearing(e) {
+  this.firstNameInput.value = "";
+  this.lastNameInput.value = "";
+  this.serviceInput.value = "";
+  this.descriptionInput.value = "";
+  this.phoneNumberInput.value = "";
+  this.emailInput.value = "";
+  this.zipCodeInput.value = "";
+  this.cityInput.value = "";
 }
 
 function handleTerminalOutputs() {
-  console.log("First Name is: " + this.state.firstNameInput);
-  console.log("Last Name is: " + this.state.lastNameInput);
-  console.log("Service is: " + this.state.serviceInput);
-  console.log("Description is: " + this.state.descriptionInput);
-  console.log("Phone Number is: " + this.state.phoneNumberInput);
-  console.log("Email is: " + this.state.emailInput);
-  console.log("Zip Code is: " + this.state.zipCodeInput);
-  console.log("Cost Per Hour is: " + this.state.costPerHourInput);
-  console.log("City is: " + this.state.cityInput);
-}
+    console.log("First Name is: " + this.state.firstNameInput);
+    console.log("Last Name is: " + this.state.lastNameInput);
+    console.log("Service is: " + this.state.serviceInput);
+    console.log("Description is: " + this.state.descriptionInput);
+    console.log("Phone Number is: " + this.state.phoneNumberInput);
+    console.log("Email is: " + this.state.emailInput);
+    console.log("Zip Code is: " + this.state.zipCodeInput);
+    console.log("Cost Per Hour is: " + this.state.costPerHourInput);
+    console.log("City is: " + this.state.cityInput);
+  }
 
 function NewPost(props) {
   return (
@@ -71,8 +85,12 @@ function NewPost(props) {
         <input name="cityInput" type="text" placeholder=""></input>
         {/* When I return each piece, since I don't want to wrap them in a form element, I could return a fragment */}
       </form>
-      <Button variant="primary">Enter</Button>
-      <Button variant="primary">Clear All</Button>
+      <Button onClick={handleServiceInput} variant="primary">
+        Enter
+      </Button>
+      <Button onClick={handleClearing} variant="primary">
+        Clear All
+      </Button>
     </div>
   );
 }
