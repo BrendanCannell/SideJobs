@@ -2,7 +2,7 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 var express = require('express');
-var auth = require("../controllers/AuthController.js");
+var auth = require("../controllers/AuthControllers.js");
 
 // API Routes
 router.use("/api", apiRoutes);

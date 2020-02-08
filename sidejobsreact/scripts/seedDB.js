@@ -143,9 +143,9 @@ const jobsSeed = [
   }
 ];
 
-db.SideJob
+db.Job
   .remove({})
-  .then(() => db.SideJob.collection.insertMany(jobsSeed))
+  .then(() => db.Job.collection.insertMany(jobsSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
