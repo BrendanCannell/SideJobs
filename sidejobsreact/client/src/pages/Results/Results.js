@@ -14,7 +14,6 @@ class Results extends Component {
             Jobs: []
         };
     };
-
     componentDidMount() {
         this.loadJobs();
     };
