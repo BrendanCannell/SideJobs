@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "rebass";
 import "./style.css";
-import { Input } from "@rebass/forms";
+// import { Input } from "@rebass/forms";
 
 function handleServiceInput(e) {
   this.setState({ firstNameInput: e.target.value });
@@ -17,8 +17,8 @@ function handleServiceInput(e) {
   handleTerminalOutputs();
 }
 
-// function handleClearing(e) {
-//   this.firstNameInput.value = "";
+function handleClearing(e) {
+  this.refs.firstNameInput.value = "";
 //   this.lastNameInput.value = "";
 //   this.serviceInput.value = "";
 //   this.descriptionInput.value = "";
@@ -26,7 +26,7 @@ function handleServiceInput(e) {
 //   this.emailInput.value = "";
 //   this.zipCodeInput.value = "";
 //   this.cityInput.value = "";
-// }
+}
 
 function handleTerminalOutputs() {
     console.log("First Name is: " + this.state.firstNameInput);
@@ -39,6 +39,9 @@ function handleTerminalOutputs() {
     console.log("Cost Per Hour is: " + this.state.costPerHourInput);
     console.log("City is: " + this.state.cityInput);
   }
+
+
+
 
 function NewPost(props) {
   return (
@@ -88,9 +91,12 @@ function NewPost(props) {
       <Button onClick={handleServiceInput} variant="primary">
         Enter
       </Button>
-      {/* <Button onClick={handleClearing} variant="primary">
+      <Button onClick={handleClearing} variant="primary">
         Clear All
-      </Button> */}
+      </Button>
+      <Button variant="primary">
+        Extra Button
+      </Button>
     </div>
   );
 }
