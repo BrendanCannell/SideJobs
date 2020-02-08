@@ -7,14 +7,6 @@ import Results from "./pages/Results.js";
 import SignIn from "./pages/SignIn.js";
 import SignUp from "./pages/SignUp.js";
 import UserProfile from "./pages/UserProfile.js";
-var mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-
-mongoose.connect('mongodb://localhost/node-auth')
-  .then(() => console.log('connection succesful'))
-  .catch((err) => console.error(err));
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
 
 
 
@@ -39,7 +31,7 @@ function App() {
           <Route exact path="/userprofile" component={UserProfile} />
 
           {/* <Route exact path="/userprofile/id" component={UserProfile} /> */}
-          {/* <Route exact path="/jobs" component={Results} /> */}
+          <Route exact path="/jobs" component={Results} />
           {/* <Route exact path="/jobs/:id" component={Job} /> */}
           <Route component={NoMatch} />
         </Switch>
