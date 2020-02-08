@@ -3,7 +3,7 @@ import React from "react";
 // import { Card } from "rebass";
 // import Results from "../../pages/Results/Results";
 // import { PromiseProvider } from "mongoose";
-import jobsArray from "../ArrayObject/ArrayObject";
+// import jobsArray from "../ArrayObject/ArrayObject";
 // This imports an object
 // Next thing to do is import seeds
 // import jobsSeed from '../../../../scripts/seedDB';
