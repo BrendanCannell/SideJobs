@@ -23,6 +23,7 @@ class Results extends Component {
             // line above needs proper url for search page, parocees.env? /jobs? port number?
             .then(res => {
             this.setState({ Jobs: res.data });
+            console.log(res);
             console.log(this.state.Jobs)
         }).catch(function (err) {
             console.log(err);

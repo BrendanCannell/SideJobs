@@ -4,9 +4,12 @@ module.exports = {
   findAll: function(req, res) {
     console.log("inside find all")
     db.Job
-      .find(req.query)
+      .find()
       .sort({ date: -1 })
-      .then(dbJob => res.json(dbJob))
+      .then(dbJob => {
+        console.log(dbJob, "dbJOb");
+        res.json(dbJob)
+      })
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
