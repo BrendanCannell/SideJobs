@@ -16,10 +16,10 @@ router.use(function(req, res) {
 router.get('/', auth.home);
 
 // route to register page
-router.get('/signin', auth.register);
+router.get('/signup', auth.register);
 
 // route for register action
-router.post('/signin', auth.doRegister);
+router.post('/signup', auth.doRegister);
 
 // route to login page
 router.get('/signin', auth.login);
