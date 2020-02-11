@@ -9,6 +9,8 @@ import SignIn from './pages/SignIn/SignIn';
 import UserProfile from './pages/UserProfile';
 import Nav from "./components/Nav/index";
 
+import NewPost from "./pages/NewPost/NewPost";
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
 
           {/* <Route exact path="/userprofile/id" component={UserProfile} /> */}
           <Route exact path="/jobs" component={Results} />
+          <Route exact path="/newpost" component={NewPost} />
           {/* <Route exact path="/jobs/:id" component={Job} /> */}
           {/* <Route component={NoMatch} /> */}
         </Switch>

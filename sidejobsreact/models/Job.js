@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// error, can't make an object
 const Schema = mongoose.Schema;
 
 const jobSchema = new Schema({

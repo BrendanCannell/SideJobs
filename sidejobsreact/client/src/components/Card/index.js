@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Heading, Text } from "rebass";
+// import { Card, Heading, Text } from "rebass";
 // import Results from "../../pages/Results/Results";
 // import { PromiseProvider } from "mongoose";
 
