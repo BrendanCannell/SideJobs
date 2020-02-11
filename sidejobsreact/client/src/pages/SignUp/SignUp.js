@@ -2,47 +2,43 @@ import React from "react";
 import { Card, Text, Button } from 'rebass';
 import { Input } from '@rebass/forms'
 // import Footer from '../../components/Footer/index'
-import './style.css'
-// $(document).ready(function() {
-//     // var signUpForm = $("form.signup");
-//     // var emailInput = $("input#email-input");
-//     // var passwordInput = $("input#password-input");
-//   // 
+import './style.css';
+import API from '../../utils';
+import Index from '../../'
 
-//     signUpForm.on("submit", function(event) {
-//       event.preventDefault();
-//       var userData = {
-//         email: emailInput.val().trim(),
-//         password: passwordInput.val().trim()
-//       };
 
-//       if (!userData.email || !userData.password) {
-//         return;
-//       }
-//       signUpUser(userData.email, userData.password);
-//       emailInput.val("");
-//       passwordInput.val("");
-//     });
+class SignUp extends Component {
+  state = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: ""
+  };
+    
+  };
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    console.log(name, value)
+    this.setState({
+      [name]: value
+    });
+  };
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.firstName && this.state.lastName && this.state.email && this.state.password) {
+      API.saveUser({
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password
+      })
+        .catch(err => console.log(err));
+    }
+  };
 
-//     function signUpUser(email, password) {
-//       $.post("/SignUp", {
-//         email: email,
-//         password: password
-//       })
-//         .then(function(data) {
-//           window.location.replace("/Landing");
-//         })
-//         .catch(handleLoginErr);
-//     }
 
-//     function handleLoginErr(err) {
-//       $("#alert .msg").text(err.responseJSON);
-//       $("#alert").fadeIn(500);
-//     }
-//   });
 
-function SignUp(props) {
-  return (
+  render () {
     <div>
       <div className='SignUpContainer'>
         <div className='SignUpCard'>
@@ -52,9 +48,10 @@ function SignUp(props) {
             </Text>
             <div>
               <Text>
-                First Name
+                {}
               </Text>
               <Input
+              name="firstName"
                 style={{ marginTop: '5px' }}
                 type='text'
                 placeholder='John'>
@@ -82,7 +79,7 @@ function SignUp(props) {
                 style={{ marginTop: '5px', marginBottom: '5px' }}
                 type='text'>
               </Input>
-              <Button className='SignUpButton'>
+              <Button className='SignUpButton' onClick={this.handleFormSubmit}>
                 Sign Up
                       </Button>
             </div>
@@ -90,6 +87,8 @@ function SignUp(props) {
         </div>
       </div>
     </div>
-  )
+  }
 }
+
+
 export default SignUp;

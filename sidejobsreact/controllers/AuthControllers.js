@@ -16,7 +16,7 @@ userController.register = function(req, res) {
 
 // Post registration
 userController.doRegister = function(req, res) {
-  User.register(new User({ username : req.body.username, name: req.body.name }), req.body.password, function(err, user) {
+  User.register(new User({ firstName : req.body.firstName, lastName: req.body.lastName, phoneNumber : req.body.phoneNumber, email :  req.body.email, zip : req.body.zip, city : req.body.city}), req.body.password, function(err, user) {
     if (err) {
       return res.render('signup', { user : user });
     }

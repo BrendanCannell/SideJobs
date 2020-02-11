@@ -14,7 +14,7 @@ var LocalStrategy = require('passport-local').Strategy;
 // var passport = require("./config/passport");
 
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 app.use(session({
     secret: 'keyboard cat',
