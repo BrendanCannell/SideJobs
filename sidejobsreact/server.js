@@ -1,49 +1,54 @@
-// var express = require("express");
-// var session = require("express-session");
-// // var passport = require("./config/passport");
-
-
-// var PORT = process.env.PORT || 8080;
-// // var db = require("./models");
-
-
-// var app = express();
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-// app.use(express.static("public"));
-// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-// // app.use(passport.initialize());
-// // app.use(passport.session());
-
-// // require("./routes/html-routes.js")(app);
-// // require("./routes/api-routes.js")(app);
-
-// // db.sequelize.sync().then(function() {
-//   app.listen(PORT, function() {
-//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-//   });
-// // });
 const express = require("express");
-
-const mongoose = require("mongoose");
-const routes = require("./routes");
+const session = require("express-session");
+const User = require('./models/User');
+const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-// Add routes, both API and view
+mongoose.Promise = global.Promise;
+
+mongoose.connect('mongodb://localhost/node-auth')
+  .then(() => console.log('connection succesful'))
+  .catch((err) => console.error(err));
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
+// const passport = require("./config/passport");
+const routes = require("./routes");
+
+
+
+const PORT = process.env.PORT || 8080;
+// const db = require("./models");
+
+
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(routes);
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sidejobs");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sidejobdb");
 
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-});
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+
+
+
+// **** GABE ************
+// you need to look at these functins because when running node server.js it says that they are not functions and im not familiar with passport so i don't know where to start with them
+// passport.use(new LocalStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
+// **** GABE ************
+
+
+
+
+  app.listen(PORT, function() {
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+  });
+// });
