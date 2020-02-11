@@ -1,8 +1,9 @@
 const router = require("express").Router();
-const jobsController = require("../../controllers/jobsController");
+const jobsController = require("../../controllers/jobsControllers");
 
 // Matches with "/api/books"
-router.route("/jobs")
+router
+  .route("/")
   .get(jobsController.findAll)
   .post(jobsController.create);
 

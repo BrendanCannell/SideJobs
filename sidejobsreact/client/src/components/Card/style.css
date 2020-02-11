@@ -1,0 +1,47 @@
+
+  .ResultCardStyle {
+    margin: 10px 10px 20px 10px;
+    border-bottom: solid grey 1px;
+  }
+  .topContainerStyle{
+    border-bottom: 1px solid grey;
+    padding: 15px 10px 15px 10px;
+
+  }
+  .HeadingStyle{
+
+  }
+  .ZipAndPriceStyle{
+    display: flex;
+    font-size: 15px;
+    color: rgb(110, 110, 110);
+}
+  .TextStyle {
+    padding-top: 5px;
+}
+  .ZipcodeStyle{
+
+  }
+
+  .CostPerHour {
+    padding-left: 10px;
+  }
+  .OverviewStyle{
+    margin-top: 5px;
+  }
+  .OverviewHeaderStyle{
+    padding: 5px 10px 5px 10px;
+  }
+  .DateStyle{
+    font-size: 12px;
+  }
+  .ContactStyle{
+    border: .5px solid grey;
+    margin: 15px 10px 15px 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: flex;
+
+  }
+ 
