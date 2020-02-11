@@ -48,16 +48,6 @@ class Results extends Component {
 
                     />
                 ))}
-
-                {/* <Card>
-                    {this.state.jobs.map(job => (
-
-                        <CardItem key={job.id}>
-                            {job.service}
-                        </CardItem>
-                    ))}
-                </Card> */}
-
             </div>
             // <div>
             //     <Card>
