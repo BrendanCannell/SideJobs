@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from '../../utils/API';
-import './style.css';
-import { Card, CardItem } from '../../components/Card';
+import JobCard from '../../components/Card';
 
 // import { Card, Heading, Text, Image } from "rebass";
 // import { Card, Image, Heading, Text } from "rebass";
@@ -19,27 +18,46 @@ class Results extends Component {
     componentDidMount() {
         this.loadJobs();
     };
-    loadJobs(){
+    loadJobs() {
         API.getJobs()
             .then(res => {
-            this.setState({ jobs: res.data });
-            console.log(res);
-            console.log(this.state.jobs)
-        }).catch(function (err) {
-            console.log(err);
-        })
+                this.setState({ jobs: res.data });
+                console.log(res);
+                console.log(this.state.jobs)
+            }).catch(function (err) {
+                console.log(err);
+            })
     };
 
     render() {
         return (
             <div>
-                <Card>
+                {this.state.jobs.map(job => (
+                    <JobCard
+                        key={job.id}
+                        firstName={job.firstName}
+                        lastName={job.lastName}
+                        service={job.service}
+                        description={job.description}
+                        phoneNumber={job.phoneNumber}
+                        email={job.email}
+                        zipCode={job.zipCode}
+                        costPerHour={job.costPerHour}
+                        city={job.city}
+                        date={job.date}
+
+                    />
+                ))}
+
+                {/* <Card>
                     {this.state.jobs.map(job => (
+
                         <CardItem key={job.id}>
                             {job.service}
                         </CardItem>
                     ))}
-                </Card>
+                </Card> */}
+
             </div>
             // <div>
             //     <Card>
