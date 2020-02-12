@@ -10,7 +10,9 @@ const userSchema = new Schema({
     phoneNumber: { type: Number},
     email: { type: String, required: true},
     zipCode: { type: String},
-    city: { type: String}
+    city: { type: String}, 
+    state: { type: String},
+    password: { type: String}
 })
 
 userSchema.plugin(passportLocalMongoose);

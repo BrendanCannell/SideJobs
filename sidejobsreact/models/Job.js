@@ -7,7 +7,7 @@ const jobSchema = new Schema({
     lastName: { type: String, required: true},
     service: { type: String, required: true},
     description: { type: String, required: true},
-    phoneNumber: { type: Number},
+    phoneNumber: { type: String},
     email: { type: String, required: true},
     zipCode: { type: String},
     costPerHour: { type: Number},

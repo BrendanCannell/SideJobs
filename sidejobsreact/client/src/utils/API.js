@@ -17,6 +17,9 @@ export default {
     saveJob: function(jobData) {
       return axios.post("/api/jobs", jobData);
     },
+    getUserProfile: function(id) {
+      return axios.get("/api/user/" + id)
+    },
     saveUser: function(User) {
       return axios.post("/signUp", User);
     }
