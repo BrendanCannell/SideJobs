@@ -21,7 +21,7 @@ function App() {
           {/* <Route exact path="/signout" component={SignOut} /> */}
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/userprofile" component={UserProfile} />
-          {/* <Route exact path="/userprofile/id" component={UserProfile} /> */}
+          <Route exact path="/userprofile/id" component={UserProfile} />
           <Route exact path="/jobs" component={Results} />
           <Route exact path="/form" component={NewPost} />
           {/* <Route exact path="/" component={Results} /> */}

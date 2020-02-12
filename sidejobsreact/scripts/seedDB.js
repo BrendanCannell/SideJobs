@@ -141,6 +141,33 @@ const jobsSeed = [
   }
 ];
 
+const userSeed = [
+  {
+    id: "1",
+    firstName: "Lillian",
+    lastName:  "Portenier",
+    phoneNumber: "919-919-9191",
+    email: "test@gmail.com",
+    zipCode: "27612",
+    city: "Raleigh",
+    state: "North Carolina",
+    password: "Password"
+  }
+];
+
+db.User
+  .remove({})
+  .then(() => db.User.collection.insertMany(userSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+
 db.Job
   .remove({})
   .then(() => db.Job.collection.insertMany(jobsSeed))

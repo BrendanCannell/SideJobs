@@ -47,7 +47,8 @@ class Results extends Component {
                         date={job.date}
 
                     />
-                ))}
+                )
+                )}
             </div>
             // <div>
             //     <Card>

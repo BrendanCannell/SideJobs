@@ -16,6 +16,9 @@ export default {
     // Saves a book to the database
     saveJob: function(jobData) {
       return axios.post("/api/jobs", jobData);
+    },
+    getUserProfile: function(id) {
+      return axios.get("/api/user/" + id)
     }
   };
   
