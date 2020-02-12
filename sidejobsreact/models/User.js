@@ -15,7 +15,8 @@ const userSchema = new Schema({
     password: { type: String}
 })
 
+userSchema.plugin(passportLocalMongoose);
 const User = mongoose.model('User', userSchema);
-// UserSchema.plugin(passportLocalMongoose);
+
 
 module.exports = User;

@@ -19,6 +19,9 @@ export default {
     },
     getUserProfile: function(id) {
       return axios.get("/api/user/" + id)
+    },
+    saveUser: function(User) {
+      return axios.post("/signUp", User);
     }
   };
   
