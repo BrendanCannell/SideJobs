@@ -1,10 +1,10 @@
-import React from "react";
+import React, {Component} from "react";
 import { Card, Text, Button } from 'rebass';
 import { Input } from '@rebass/forms'
 // import Footer from '../../components/Footer/index'
 import './style.css';
-import API from '../../utils';
-import Index from '../../'
+import API from '../../utils/API';
+
 
 
 class SignUp extends Component {
@@ -15,7 +15,7 @@ class SignUp extends Component {
     password: ""
   };
     
-  };
+  
   handleInputChange = event => {
     const { name, value } = event.target;
     console.log(name, value)
@@ -39,6 +39,7 @@ class SignUp extends Component {
 
 
   render () {
+    return(
     <div>
       <div className='SignUpContainer'>
         <div className='SignUpCard'>
@@ -87,8 +88,8 @@ class SignUp extends Component {
         </div>
       </div>
     </div>
-  }
-}
+    )}
+  };
 
 
 export default SignUp;

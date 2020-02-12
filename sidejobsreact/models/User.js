@@ -13,7 +13,8 @@ const userSchema = new Schema({
     city: { type: String}
 })
 
+userSchema.plugin(passportLocalMongoose);
 const User = mongoose.model('User', userSchema);
-// UserSchema.plugin(passportLocalMongoose);
+
 
 module.exports = User;
