@@ -24,8 +24,11 @@ const SignInButtonStyle = {
 };
 const NavFontStyle = {
     fontSize: '40px',
-    
-}
+};
+const SignOutButtnStyle = {
+    backgroundColor: '#1B1F3B'
+};
+
 function NavBar() {
     return (
         <Flex style= {NavBarStyle}
@@ -39,6 +42,8 @@ function NavBar() {
             <Button style= {SignInButtonStyle} variant='primary' mr={2}>SignIn</Button>
 
             <Button style= {SignUpButtnStyle} variant='outline' mr={2}>SignUp</Button>
+
+            <Button style= {SignOutButtnStyle} variant='outline' mr={2}>SignOut</Button>
 
             {/* <Link variant='nav' href='#!'>
                 Profile
