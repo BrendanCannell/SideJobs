@@ -7,7 +7,7 @@ const userSchema = new Schema({
     id: { type: Number, required: true},
     firstName: { type: String, required: true},
     lastName: { type: String, required: true},
-    phoneNumber: { type: Number},
+    phoneNumber: { type: String},
     email: { type: String, required: true},
     zipCode: { type: String},
     city: { type: String}, 

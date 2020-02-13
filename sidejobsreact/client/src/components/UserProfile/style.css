@@ -1,0 +1,25 @@
+.listItemStyle{
+    padding: 0px;
+}
+.pageContentContainer{
+    display: flex;
+    margin: 0px 0px 0px 50px;
+
+}
+.userInfo{
+    width: 25%;
+}
+.userPostContainer{
+    width: 50%;
+    padding: 20px;
+    margin: 0px 0px 0px 25px;  
+}
+.CardBody{
+    /* display: flex */
+}
+.cityPriceContainer{
+    display: flex;
+}
+.overviewContainer{
+    display: flex;
+}
