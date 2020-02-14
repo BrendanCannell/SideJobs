@@ -10,8 +10,11 @@ router
 // Matches with "/api/books/:id"
 router
   .route("/:id")
-  .get(jobsController.findById)
+  // .get(jobsController.findById)
   .put(jobsController.update)
   .delete(jobsController.remove);
 
+  router
+  .route("/:service")
+  .get(jobsController.findByService);
 module.exports = router;

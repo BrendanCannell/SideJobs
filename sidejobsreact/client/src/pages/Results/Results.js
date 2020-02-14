@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import API from '../../utils/API';
 import JobCard from '../../components/Card';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
+
 
 // import { Card, Heading, Text, Image } from "rebass";
 // import { Card, Image, Heading, Text } from "rebass";
@@ -12,11 +16,14 @@ class Results extends Component {
     // super(props);
     // this.
     state = {
-        jobs: []
+        jobs: [],
+        jobSearch: ''
     };
     // };
     componentDidMount() {
         this.loadJobs();
+        // this.handleFormSubmit();
+
     };
     loadJobs() {
         API.getJobs()
@@ -29,9 +36,36 @@ class Results extends Component {
             })
     };
 
+    handleFormSubmit = (event) => {
+
+        event.preventDefault();
+        API.findByService(this.state.jobSearch)
+            .then(res => 
+                console.log({res}) || this.setState ({ jobs: res.data}))
+                
+            .catch(err => console.log(err));
+    };
+    handleInputChange = event => {
+        const {name, value} = 
+        event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
     render() {
         return (
             <div>
+                <div style={{margin: '20px'}}>
+                    <InputGroup className="mb-3">
+                        <InputGroup.Prepend>
+                        <Button onClick={this.handleFormSubmit} variant="outline-secondary">Search</Button>
+                        </InputGroup.Prepend>
+                        <FormControl name ='jobSearch'value={this.state.jobSearch}
+                        onChange={this.handleInputChange}/>
+                    </InputGroup>
+                </div>
+
                 {this.state.jobs.map(job => (
                     <JobCard
                         key={job.id}
