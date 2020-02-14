@@ -6,9 +6,9 @@ export default {
       return axios.get("/api/jobs");
     },
     // Gets the book with the given id
-    getJob: function(id) {
-      return axios.get("/api/jobs/" + id);
-    },
+    // getJob: function(id) {
+    //   return axios.get("/api/jobs/" + id);
+    // },
     // Deletes the book with the given id
     deleteJob: function(id) {
       return axios.delete("/api/jobs/" + id);
@@ -22,6 +22,9 @@ export default {
     },
     saveUser: function(User) {
       return axios.post("/signUp", User);
+    },
+    findByService: function (service) {
+      return axios.get("/api/jobs/" + service);
     }
   };
   

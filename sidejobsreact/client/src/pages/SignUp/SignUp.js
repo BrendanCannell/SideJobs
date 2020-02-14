@@ -4,6 +4,7 @@ import { Input } from '@rebass/forms'
 // import Footer from '../../components/Footer/index'
 import './style.css';
 import API from '../../utils/API';
+// import SignUpForm from '../../components/signUpForm'
 
 
 
@@ -41,6 +42,9 @@ class SignUp extends Component {
   render () {
     return(
     <div>
+        {/* <SignUpForm>
+          </SignUpForm> */}
+      
       <div className='SignUpContainer'>
         <div className='SignUpCard'>
           <Card>
@@ -49,40 +53,48 @@ class SignUp extends Component {
             </Text>
             <div>
               <Text>
-                {}
+                First Name
               </Text>
               <Input
               name="firstName"
                 style={{ marginTop: '5px' }}
+                value= {this.state.firstName}
                 type='text'
-                placeholder='John'>
+                onChange={this.handleInputChange}>
               </Input>
               <Text>
                 Last Name
               </Text>
               <Input
+              name='lastName'
                 style={{ marginTop: '5px' }}
-                type='text'
-                placeholder='Smith'>
+                value= {this.state.lastName}
+                onChange={this.handleInputChange}
+                type='text'>
               </Input>
               <Text>
                 Email
               </Text>
               <Input
+              name='email'
                 style={{ marginTop: '5px' }}
                 type='text'
-                placeholder='johnSmith@email.com'>
+                value={this.state.email}
+                onChange={this.handleInputChange}>
               </Input>
               <Text>
                 Password
               </Text>
               <Input
+              name='password'
                 style={{ marginTop: '5px', marginBottom: '5px' }}
+                value={this.state.password}
+                onChange={this.handleInputChange}
                 type='text'>
               </Input>
               <Button className='SignUpButton' onClick={this.handleFormSubmit}>
                 Sign Up
-                      </Button>
+              </Button>
             </div>
           </Card>
         </div>
