@@ -23,7 +23,7 @@ class UserProfile extends Component{
       <div> 
         <UserProfileCard
 
-        key={this.state.users.id}
+        // key={this.state.users._id}
         firstName={this.state.users.firstName}
         lastName={this.state.users.lastName}
         phoneNumber={this.state.users.phoneNumber}
