@@ -4,7 +4,7 @@ import { Input } from '@rebass/forms'
 // import Footer from '../../components/Footer/index'
 import './style.css';
 import API from '../../utils/API';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 class SignUp extends Component {
@@ -31,6 +31,9 @@ class SignUp extends Component {
         lastName: this.state.lastName,
         email: this.state.email,
         password: this.state.password
+      }).then(User => {
+        Router.push(`userprofile/${User.id}`)
+        // look at react router
       })
         .catch(err => console.log(err));
     }
