@@ -21,7 +21,14 @@ export default {
       return axios.get("/api/user/" + id)
     },
     saveUser: function(User) {
-      return axios.post("/signUp", User);
+      console.log(User);
+      return axios.post("/api/auth/signup", User);
+    },
+    findUser: function(User) {
+      return axios.get("/signin", User)
+    },
+    logoutUser: function(User) {
+      return axios.get("/signout", User)
     },
     findByService: function (service) {
       return axios.get("/api/jobs/" + service);
