@@ -5,25 +5,14 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
-
-// import { Card, Heading, Text, Image } from "rebass";
-// import { Card, Image, Heading, Text } from "rebass";
-// import { CardData, Card } from '../../components/Card';
-
-
 class Results extends Component {
-    // constructor(props) {
-    // super(props);
-    // this.
     state = {
         jobs: [],
         jobSearch: ''
     };
-    // };
+
     componentDidMount() {
         this.loadJobs();
-        // this.handleFormSubmit();
-
     };
     loadJobs() {
         API.getJobs()
@@ -40,14 +29,14 @@ class Results extends Component {
 
         event.preventDefault();
         API.findByService(this.state.jobSearch)
-            .then(res => 
-                console.log({res}) || this.setState ({ jobs: res.data}))
-                
+            .then(res =>
+                console.log({ res }) || this.setState({ jobs: res.data }))
+
             .catch(err => console.log(err));
     };
     handleInputChange = event => {
-        const {name, value} = 
-        event.target;
+        const { name, value } =
+            event.target;
         this.setState({
             [name]: value
         });
@@ -56,16 +45,15 @@ class Results extends Component {
     render() {
         return (
             <div>
-                <div style={{margin: '20px'}}>
+                <div style={{ margin: '20px' }}>
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
-                        <Button onClick={this.handleFormSubmit} variant="outline-secondary">Search</Button>
+                            <Button onClick={this.handleFormSubmit} variant="outline-secondary">Search</Button>
                         </InputGroup.Prepend>
-                        <FormControl name ='jobSearch'value={this.state.jobSearch}
-                        onChange={this.handleInputChange}/>
+                        <FormControl name='jobSearch' value={this.state.jobSearch}
+                            onChange={this.handleInputChange} />
                     </InputGroup>
                 </div>
-
                 {this.state.jobs.map(job => (
                     <JobCard
                         key={job.id}
@@ -79,43 +67,13 @@ class Results extends Component {
                         costPerHour={job.costPerHour}
                         city={job.city}
                         date={job.date}
-
                     />
                 )
                 )}
             </div>
-            // <div>
-            //     <Card>
-            //         <div className='ResultCardStyle'>
-            //             <div className='ResultsHeaderInfoFloat'>
-            //                 <div>
-            //                     <Image className='CardImageStyle' src={'https://via.placeholder.com/150x150'} />
-            //                 </div>
-            //                 <div className='CardHearderInfoFloat'>
-            //                     <Heading className='CardTitleStyle'>Title Title Title Title Title Title </Heading>
-            //                     <div className='ZipAndPriceStyle'>
-            //                         <Text className='CardPriceStyle'> Pricing/hr</Text>
-            //                         <Text className='CardZipcodeStyle'> ZipCode </Text>
-            //                     </div>
-            //                 </div>
-            //             </div>
-            //             <Text className='CardTextStyle'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
-            //         </div>
-            //     </Card>
-            // </div>
         )
     }
 }
-
-// const ResultCardStyle = {
-//     border: '30px, solid, black',
-//     margin: '20px',
-//     borderRadius: '4px',
-//     boxShadow: '4px',
-//     // shadows: {
-//     //     small: '0 0 4px rgba(0, 0, 0, .125)'}
-
-// };
 
 
 
