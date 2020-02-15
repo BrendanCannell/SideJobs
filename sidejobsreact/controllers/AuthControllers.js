@@ -1,49 +1,66 @@
-var mongoose = require("mongoose");
+// var mongoose = require("mongoose");
 var passport = require("passport");
 var User = require("../models/User");
-var Job = require('../models/Job')
-
-var userController = {};
+// var Job = require('../models/Job')
+// var userController = require('./userController')
+const db = require("../models");
 
 // Restrict access to root page
-userController.home = function(req, res) {
-  res.render('/', { user : req.user });
-};
+module.exports = {
+  home: function (req, res) {
+  db.User
+      .then(res.redirect('/', { user: req.user }));
+  },
 
-// Go to registration page
-userController.register = function(req, res) {
-  res.render('signup');
-};
+  // Go to registration page
+  register: function (req, res) {
+    db.User
+      .then(res.render('signup'));
+  },
 
-// Post registration
-userController.doRegister = function(req, res) {
-  User.register(new User({ firstName : req.body.firstName, lastName: req.body.lastName, phoneNumber : req.body.phoneNumber, email :  req.body.email, zip : req.body.zip, city : req.body.city}), req.body.password, function(err, user) {
-    if (err) {
-      return res.render('signup', { user : user });
-    }
+  // Post registration
+  doRegister: function (req, res) {
+    console.log(req.body)
+    db.User
+      .create({
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          phoneNumber: req.body.phoneNumber,
+          email: req.body.email,
+          password: req.body.password,
+          zip: req.body.zip,
+          city: req.body.city
+        })
+        .then(user => {
+          console.log(user)
+          passport.authenticate('local')(req, res, function () {
+            res.json(user);
+          });
+        }) 
+  },
 
-    passport.authenticate('local')(req, res, function () {
-      res.redirect('/');
-    });
-  });
-};
+  // Go to login page
+  
+  login: function (req, res) {
+    db.User
+      res.redirect('signin');
+  },
 
-// Go to login page
-userController.login = function(req, res) {
-  res.render('signin');
-};
 
 // Post login
-userController.doLogin = function(req, res) {
-  passport.authenticate('local')(req, res, function () {
+doLogin: function (req, res) {
+  db.User
+    passport.authenticate('local')(req, res, function () {
     res.redirect('/');
   });
-};
+},
 
-// logout
-userController.logout = function(req, res) {
-  req.logout();
-  res.redirect('/');
-};
+  // logout
+  logout: function (req, res) {
+    db.User
+      req.logout();
+      res.redirect('/');
+  }, 
+}
 
-module.exports = userController;
+

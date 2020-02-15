@@ -1,13 +1,40 @@
-import React from "react";
+import React, {Component} from "react";
 import { Card, Text, Button } from 'rebass';
 import { Input } from '@rebass/forms'
 // import Footer from '../../components/Footer/index'
-import './style.css'
+import './style.css';
+import API from '../../utils/API';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+class SignIn extends Component {
+    state = {
+      email: "",
+      password: ""
+    };
+      
+    
+    handleInputChange = event => {
+      const { name, value } = event.target;
+      console.log(name, value)
+      this.setState({
+        [name]: value
+      });
+    };
+    handleFormSubmit = event => {
+      event.preventDefault();
+      if (this.state.email && this.state.password) {
+        API.findUser({
+          email: this.state.email,
+          password: this.state.password
+        }).then(User => {
+            Router.push(`userprofile/${User.id}`)
+            // look at react router
+        })
+          .catch(err => console.log(err));
+      }
+    };
 
-
-
-function SignIn(props) {
+render () {
     return (
         <div>
             <div className='SignInContainer'>
@@ -37,7 +64,7 @@ function SignIn(props) {
                 </div>
             </div>
         </div>
-    )
+    )}
 }
 
 export default SignIn;

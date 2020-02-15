@@ -1,6 +1,6 @@
 const express = require("express");
 const session = require("express-session");
-const User = require('./models/User');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 
@@ -29,6 +29,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sidejobdb");
@@ -40,9 +43,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sidejobdb");
 
 // **** GABE ************
 // you need to look at these functins because when running node server.js it says that they are not functions and im not familiar with passport so i don't know where to start with them
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+
 // **** GABE ************
 
 
