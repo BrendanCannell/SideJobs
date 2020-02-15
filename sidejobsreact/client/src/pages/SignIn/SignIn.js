@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { Card, Text, Button } from 'rebass';
 import { Input } from '@rebass/forms'
 // import Footer from '../../components/Footer/index'

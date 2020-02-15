@@ -20,24 +20,26 @@ module.exports = {
 
   // Post registration
   doRegister: function (req, res) {
+    console.log(req.body)
     User
       .create(
-        new User({
+        {
           firstName: req.body.firstName,
           lastName: req.body.lastName,
           phoneNumber: req.body.phoneNumber,
           email: req.body.email,
+          password: req.body.password,
           zip: req.body.zip,
           city: req.body.city
-        }),
-        req.body.password,
+        },
+        // req.body.password,
         function (err, user) {
-          if (err) {
-            return res.redirect('signup', { user: user });
-          }
+          // if (err) {
+          //   return res.redirect('signup', { user: user });
+          // }
 
           passport.authenticate('local')(req, res, function () {
-            res.redirect('/');
+            // res.redirect('/');
           });
         }
       );
@@ -68,4 +70,3 @@ doLogin: function (req, res) {
 }
 
 
-module.exports = userController;

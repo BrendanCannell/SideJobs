@@ -1,6 +1,6 @@
 const express = require("express");
 const session = require("express-session");
-const User = require('./models/User');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 
@@ -28,6 +28,9 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use(routes);
 
