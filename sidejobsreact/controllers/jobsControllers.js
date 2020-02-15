@@ -36,5 +36,11 @@ module.exports = {
       .then(dbJob => dbJob.remove())
       .then(dbJob => res.json(dbJob))
       .catch(err => res.status(422).json(err));
+  },
+  findByService: function(req, res) {
+    db.Job 
+      .find({service: req.params.service})
+      .then(dbJob => res.json(dbJob))
+      .catch(err => console.log(err) ||  res.status(422).json(err));
   }
 };

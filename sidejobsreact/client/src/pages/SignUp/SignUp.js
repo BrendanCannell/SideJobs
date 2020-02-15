@@ -5,6 +5,8 @@ import { Input } from '@rebass/forms'
 import './style.css';
 import API from '../../utils/API';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import SignUpForm from '../../components/signUpForm'
+
 
 
 class SignUp extends Component {
@@ -47,6 +49,7 @@ class SignUp extends Component {
     <div>
         {/* <SignUpForm>
           </SignUpForm> */}
+      
       <div className='SignUpContainer'>
         <div className='SignUpCard'>
           <Card>

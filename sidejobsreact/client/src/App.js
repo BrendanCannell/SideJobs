@@ -18,11 +18,14 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/post" component={NewPost} />
+
           {/* <Route exact path="/signout" component={SignOut} /> */}
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/userprofile" component={UserProfile} />
           <Route exact path="/userprofile/:id" component={UserProfile} />
           <Route exact path="/jobs" component={Results} />
+          <Route exact path="/jobs/:service" component={Results} />
           <Route exact path="/form" component={NewPost} />
           {/* <Route exact path="/" component={Results} /> */}
           {/* <Route exact path="/jobs/:id" component={Job} /> */}
