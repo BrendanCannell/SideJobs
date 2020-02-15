@@ -12,7 +12,11 @@ const userSchema = new Schema({
     zipCode: { type: String},
     city: { type: String}, 
     state: { type: String},
-    password: { type: String}
+    password: { type: String}, 
+    post: {
+        type: Schema.Types.ObjectId, 
+        ref: "Job"
+    }
 })
 
 userSchema.plugin(passportLocalMongoose);
