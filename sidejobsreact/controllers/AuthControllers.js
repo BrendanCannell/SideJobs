@@ -25,11 +25,8 @@ module.exports = {
       .create({
           firstName: req.body.firstName,
           lastName: req.body.lastName,
-          phoneNumber: req.body.phoneNumber,
           email: req.body.email,
           password: req.body.password,
-          zip: req.body.zip,
-          city: req.body.city
         })
         .then(user => {
           console.log(user)

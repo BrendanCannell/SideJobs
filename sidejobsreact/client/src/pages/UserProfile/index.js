@@ -26,11 +26,11 @@ class UserProfile extends Component{
         // key={this.state.users._id}
         firstName={this.state.users.firstName}
         lastName={this.state.users.lastName}
-        phoneNumber={this.state.users.phoneNumber}
+        // phoneNumber={this.state.users.phoneNumber}
         email={this.state.users.email}
-        zipCode={this.state.users.zipCode}
-        city={this.state.users.city}
-        state={this.state.users.state}
+        // zipCode={this.state.users.zipCode}
+        // city={this.state.users.city}
+        // state={this.state.users.state}
         password={this.state.users.password}
 
         ></UserProfileCard>
