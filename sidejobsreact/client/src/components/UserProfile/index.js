@@ -1,6 +1,6 @@
 import React from 'react';
 // import { Text } from 'rebass';
-import JumbotronComponent from '../Jumbotron';
+// import JumbotronComponent from '../Jumbotron';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
@@ -12,16 +12,16 @@ function UserProfileard(props) {
 
     return (
         <div>
-            <JumbotronComponent
+            {/* <JumbotronComponent
                 content="User Profile">
-            </JumbotronComponent>
+            </JumbotronComponent> */}
 
             <div className='pageContentContainer'>
                 <div className='userInfo'>
                     <Card style={{ width: '18rem', margin: '20px' }}>
                         <Card.Body >
                             <Card.Title>{firstLast}</Card.Title>
-                            <Card.Text>{props.city} {props.state}, {props.zipCode}</Card.Text>
+                            {/* <Card.Text>{props.city} {props.state}, {props.zipCode}</Card.Text> */}
                         </Card.Body>
                         <ListGroup className="list-group-flush">
                             <ListGroupItem style={{ padding: '0px 20px 0px 20px' }}>

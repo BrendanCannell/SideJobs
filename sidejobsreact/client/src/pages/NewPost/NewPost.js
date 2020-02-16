@@ -1,64 +1,119 @@
 import React, { Component } from "react";
-import { Button } from "rebass";
+// import { Button } from "rebass";
 import "./style.css";
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+// import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import API from "../../utils/API";
+import Button from 'react-bootstrap/Button';
 // import { Input } from "@rebass/forms";
 
 
 class NewPost extends Component{
-  state = {
-    firstName: '',
-    lastName: '',
-    service: '',
-    description: '',
-    phoneNumber: '',
-    email: '',
-    zipCode: '',
-    city: ''
+
+  constructor(props) {
+    super(props);
+    this.onChangefirstName = this.onChangefirstName.bind(this);
+    this.onChangelastName = this.onChangelastName.bind(this);
+    this.state = {
+      firstName: '',
+      lastName: ''
+    }
   };
+
+  onChangefirstName(event) {
+    this.setState({
+        fistName: event.target.value
+    });
+  };
+  onChangelastName(event) {
+    this.setState({
+        lastName: event.target.value
+    });
+  }
+  // state = {
+  //   firstName: '',
+  //   lastName: '',
+  //   service: '',
+  //   description: '',
+  //   phoneNumber: '',
+  //   email: '',
+  //   zipCode: '',
+  //   city: '',
+  //   costPerHour: ''
+  // };
+ 
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   const newPost = {
+  //     firstName: this.state.firstName,
+  //      lastName: this.state.lastName, 
+  //     //  service: this.state.service, 
+  //     //  description: this.state.description, 
+  //     //  phoneNumber: this.state.phoneNumber, 
+  //     //  email: this.state.email, 
+  //     //  zipCode: this.state.zipCode, 
+  //     //  city: this.state.city,
+  //     //  costPerHour: this.state.costPerHour
+  //   }
+  
+  //   API.create({newPost})
+  //   .then(res => console.log(res.data))
+  // };
+  // handleInputChange = event => {
+  //   const { name, value } = event.target;
+  //   this.setState({
+  //     [name] : value
+  //     });
+  // };
+
 
   render() {
     return(
       <div>
-        <Form style={{width: '75%'}}>
+        <Form style={{width: '75%', marginLeft: '20px'}}>
           <Row>
             <Col>
             <Form.Group> 
               <Form.Label> First Name</Form.Label>
-              <Form.Control placeholder="First name" /> 
+              <Form.Control name='firstName' value={this.state.firstName} onChange={this.handleInputChange} placeholder="First name" /> 
             </Form.Group>
             </Col>
             <Col>
             <Form.Group> 
               <Form.Label> Last Name</Form.Label>
-              <Form.Control placeholder="Last name" /> 
+              <Form.Control name='lastName' value={this.state.lastName} onChange={this.handleInputChange} placeholder="Last name" /> 
             </Form.Group>
             </Col>
           </Row>
           <Row>
-            <Col>
+            {/* <Col>
             <Form.Label>Email</Form.Label>
-              <Form.Control placeholder="Email"/>
+              <Form.Control name='email' value={this.state.email} onChange={this.handleInputChange}  placeholder="Email"/>
             </Col>
             <Col>
             <Form.Label>Phone Number</Form.Label>
-              <Form.Control placeholder="Phone Number"/>
+              <Form.Control name='phoneNumber' value={this.state.phoneNumber} onChange={this.handleInputChange} placeholder="Phone Number"/>
             </Col>
           </Row>
           <Row>
             <Col>
             <Form.Group>
               <Form.Label>City</Form.Label>
-              <Form.Control placeholder="City"/>
+              <Form.Control name='city' value={this.state.city} onChange={this.handleInputChange} placeholder="City"/>
+            </Form.Group>
+            </Col> */}
+            {/* <Col>
+            <Form.Group>
+              <Form.Label>Zipcode</Form.Label>
+              <Form.Control name='zipCode' value={this.state.zipCode} onChange={this.handleInputChange} placeholder="Zipcode"/>
             </Form.Group>
             </Col>
             <Col>
             <Form.Group>
-              <Form.Label>Zipcode</Form.Label>
-              <Form.Control placeholder="Zipcode"/>
+              <Form.Label>Price Per Hour</Form.Label>
+              <Form.Control name='costPerHour' value={this.state.costPerHour} onChange={this.handleInputChange} placeholder="$$$"/>
             </Form.Group>
             </Col>
           </Row>
@@ -66,16 +121,19 @@ class NewPost extends Component{
             <Col>
             <Form.Group>
               <Form.Label>Service</Form.Label>
-              <Form.Control placeholder="Service"/>
+              <Form.Control name='service' value={this.state.service} onChange={this.handleInputChange} placeholder="Service"/>
             </Form.Group>
             </Col>
             <Col>
             <Form.Group>
               <Form.Label>Description</Form.Label>
-              <Form.Control placeholder="Description"/>
+              <Form.Control name='description' value={this.state.description} onChange={this.handleInputChange} placeholder="Description"/>
             </Form.Group>
-            </Col>
+            </Col> */}
           </Row>
+          <Button>
+            Submit
+          </Button>
           
         </Form>
       </div>

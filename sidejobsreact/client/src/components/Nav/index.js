@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {
-    Flex, Text, Box, Button, Link
+    Flex, Text, Box, Button
 } from 'rebass';
 // import SignUpButton from './';
 
@@ -14,20 +15,20 @@ const NavBarStyle = {
     backgroundColor: '#E8406D',
     fontSide: '50px'
 };
-const SignUpButtonStyle = {
-    color: '#1B1F3B',
-    borderColor: '#1B1F3B',
-    border: '20px',
-};
+// const SignUpButtonStyle = {
+//     color: '#1B1F3B',
+//     borderColor: '#1B1F3B',
+//     border: '20px',
+// };
 const SignInButtonStyle = {
     backgroundColor: '#1B1F3B'
 };
 const NavFontStyle = {
     fontSize: '40px',
 };
-const SignOutButtonStyle = {
-    backgroundColor: '#1B1F3B'
-};
+// const SignOutButtonStyle = {
+//     backgroundColor: '#1B1F3B'
+// };
 
 function NavBar() {
     return (
@@ -39,7 +40,13 @@ function NavBar() {
 
             <Text style={NavFontStyle} p={2} fontWeight='bold'>SideJobs</Text>
             <Box mx='auto' />
-            <Link to="/signin">
+            <Link to='/post'>
+            <Button style={SignInButtonStyle} variant="primary" mr={2}> 
+                New Post 
+            </Button>
+            </Link>
+           
+            {/* <Link to="/signin">
                 <Button style={SignInButtonStyle} variant="primary" mr={2}>
                     SignIn
                 </Button>
@@ -53,7 +60,7 @@ function NavBar() {
                 <Button style={SignOutButtonStyle} variant="outline" mr={2}>
                     SignOut
                 </Button>
-            </Link>
+            </Link> */}
         </Flex>
     );
 };
