@@ -179,3 +179,14 @@ db.Job
     console.error(err);
     process.exit(1);
   });
+
+  var createTextIndex = function(db, callback) {
+    // Get the documents collection
+    var collection = db.collection('Job');
+    // Create the index
+    collection.createIndex(
+      { comments : "text" }, function(err, result) {
+      console.log(result);
+      callback(result);
+    });
+  };

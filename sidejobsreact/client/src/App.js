@@ -16,7 +16,7 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Results} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/post" component={NewPost} />
 

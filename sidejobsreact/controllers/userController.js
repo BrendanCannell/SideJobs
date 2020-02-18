@@ -15,6 +15,14 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  userPosts: async function (req, res){
+    db.User
+      .findById(req.params.id)
+      .populate('post')
+      // .select('post')
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.User
       .create(req.body)

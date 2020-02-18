@@ -15,10 +15,14 @@ class UserProfile extends Component{
         this.setState ({ users: res.data });
         console.log(res, "res data");
         console.log(this.state.users);
+        console.log(this.state.users.post.service, 'service')
+        console.log(this.state.users.post.description, 'description')
+
       }).catch (err => console.log(err));
   };
 
   render() {
+    console.log(this.state.users, 'render')
     return (
       <div> 
         <UserProfileCard
@@ -32,6 +36,9 @@ class UserProfile extends Component{
         // city={this.state.users.city}
         // state={this.state.users.state}
         password={this.state.users.password}
+        // service={this.state.users.post.service}
+        // service={this.state.users.post.description}
+
 
         ></UserProfileCard>
       </div>

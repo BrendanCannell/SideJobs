@@ -49,6 +49,17 @@ class NewPost extends Component {
         .then(res => console.log(res))
         .catch(err => console.log(err))
     }
+    this.setState({
+      firstName: '',
+      lastName: '',
+      service: '', 
+      description: '', 
+      phoneNumber: '', 
+      email: '', 
+      zipCode: '', 
+      city: '',
+      costPerHour: ''
+    })
   };
 
 

@@ -27,7 +27,7 @@ class Results extends Component {
 
     handleFormSubmit = (event) => {
 
-        event.preventDefault();
+        // event.preventDefault();
         API.findByService(this.state.jobSearch)
             .then(res =>
                 console.log({ res }) || this.setState({ jobs: res.data }))
@@ -41,6 +41,11 @@ class Results extends Component {
             [name]: value
         });
     };
+    onKeyPress = e => {
+        if (e.which === 13) {
+            this.handleFormSubmit();
+        }
+    }
 
     render() {
         return (
@@ -51,7 +56,8 @@ class Results extends Component {
                             <Button onClick={this.handleFormSubmit} variant="outline-secondary">Search</Button>
                         </InputGroup.Prepend>
                         <FormControl name='jobSearch' value={this.state.jobSearch}
-                            onChange={this.handleInputChange} />
+                            onChange={this.handleInputChange} 
+                            onKeyPress={this.onKeyPress}/>
                     </InputGroup>
                 </div>
                 {this.state.jobs.map(job => (

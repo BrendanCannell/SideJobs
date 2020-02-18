@@ -25,6 +25,7 @@ const SignInButtonStyle = {
 };
 const NavFontStyle = {
     fontSize: '40px',
+    color: 'white'
 };
 // const SignOutButtonStyle = {
 //     backgroundColor: '#1B1F3B'
@@ -37,8 +38,9 @@ function NavBar() {
             color='white'
             bg='black'
             alignItems='center'>
-
+            <Link to='/' style={{ textDecoration: 'none'}}>
             <Text style={NavFontStyle} p={2} fontWeight='bold'>SideJobs</Text>
+            </Link>
             <Box mx='auto' />
             <Link to='/post'>
             <Button style={SignInButtonStyle} variant="primary" mr={2}> 

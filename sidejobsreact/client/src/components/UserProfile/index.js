@@ -41,7 +41,7 @@ function UserProfileard(props) {
                 <div className='userPostContainer'>
                     <Card style={{margin: '0px 0px 10px 0px' }}>
                         <Card.Body>
-                        <Card.Title>Service Service Service</Card.Title>
+                        <Card.Title> {props.service} </Card.Title>
                             <div className='CardBody'>
                             <div className='cityPriceContainer'>
                                 <p>City, Zipcode</p>
