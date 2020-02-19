@@ -42,9 +42,19 @@ function NavBar() {
             <Text style={NavFontStyle} p={2} fontWeight='bold'>SideJobs</Text>
             </Link>
             <Box mx='auto' />
+            <Link to='/signup'>
+            <Button style={SignInButtonStyle} variant="primary" mr={2}> 
+                Sign Up 
+            </Button>
+            </Link>
             <Link to='/post'>
             <Button style={SignInButtonStyle} variant="primary" mr={2}> 
                 New Post 
+            </Button>
+            </Link>
+            <Link to='/jobs'>
+            <Button style={SignInButtonStyle} variant="primary" mr={2}> 
+                Current Listings
             </Button>
             </Link>
            
