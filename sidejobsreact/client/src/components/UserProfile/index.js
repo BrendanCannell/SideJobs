@@ -44,34 +44,15 @@ function UserProfileard(props) {
                         <Card.Title> {props.service} </Card.Title>
                             <div className='CardBody'>
                             <div className='cityPriceContainer'>
-                                <p>City, Zipcode</p>
-                                <p>$40</p>
+                                <p>{props.city}, {props.zipCode}</p>
+                                <p>${props.costPerHour}</p>
                             </div>
-                            <p>Description Description Description Description Description</p>
+                            <p>{props.description}</p>
                             <div className='overviewContainer'>
                                 <p>Date posted </p>
                                 <p>Contact: </p>
-                                <p>First Last</p>
-                                <p>919-333-4444</p>
-                            </div>
-                            <Button variant="primary">Edit Posting</Button>
-                            </div>
-                        </Card.Body>
-                    </Card>
-                    <Card>
-                        <Card.Body >
-                        <Card.Title>Service Service Service</Card.Title>
-                            <div className='CardBody'>
-                            <div className='cityPriceContainer'>
-                                <p>City, Zipcode</p>
-                                <p>$40</p>
-                            </div>
-                            <p>Description Description Description Description Description</p>
-                            <div className='overviewContainer'>
-                                <p>Date posted </p>
-                                <p>Contact: </p>
-                                <p>First Last</p>
-                                <p>919-333-4444</p>
+                                <p>{props.firstPost} {props.lastPost}</p>
+                                <p>{props.phonePost}</p>
                             </div>
                             <Button variant="primary">Edit Posting</Button>
                             </div>
