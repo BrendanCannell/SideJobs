@@ -4,7 +4,7 @@ import { Input } from '@rebass/forms'
 // import Footer from '../../components/Footer/index'
 import './style.css';
 import API from '../../utils/API';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 // import SignUpForm from '../../components/signUpForm'
 
 
