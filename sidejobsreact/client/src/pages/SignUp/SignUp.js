@@ -33,11 +33,16 @@ class SignUp extends Component {
         lastName: this.state.lastName,
         email: this.state.email,
         password: this.state.password
-      }).then(User => {
-        console.log(User)
-        Router.push(`userprofile/${User.id}`)
-        // look at react router
       })
+      // .then(res => {
+      //   // console.log(res.data, "data");
+      //   // console.log(res, "res");
+
+
+      // //   router.push(`userprofile/${User.id}`)
+      //   // look at react router
+      // })
+      
         .catch(err => console.log(err));
     }
   };

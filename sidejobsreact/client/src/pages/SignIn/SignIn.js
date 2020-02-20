@@ -26,8 +26,8 @@ class SignIn extends Component {
         API.findUser({
           email: this.state.email,
           password: this.state.password
-        }).then(User => {
-            Router.push(`userprofile/${User.id}`)
+        // }).then(User => {
+        //     Router.push(`userprofile/${User.id}`)
             // look at react router
         })
           .catch(err => console.log(err));
@@ -44,19 +44,22 @@ render () {
                             Sign In
                         </Text>
                         <div>
-                            <Input className='SignInInput'
-                                style={{margin: '5px'}}
-                                type='text'
-                                placeholder='username or email'>
+                            <Input
+                             name='email'
+                             style={{ marginTop: '5px' }}
+                             type='text'
+                             value={this.state.email}
+                             onChange={this.handleInputChange}>
                             </Input>
 
                             <Input
-                            className='SignInInput'
-                             style={{margin: '5px'}}
-                                type='text'
-                                placeholder='password'>
+                            name='password'
+                            style={{ marginTop: '5px', marginBottom: '5px' }}
+                            value={this.state.password}
+                            onChange={this.handleInputChange}
+                            type='text'>
                             </Input>
-                            <Button className='SignInButton'>
+                            <Button className='SignInButton' onClick={this.handleFormSubmit}>
                                 Sign In
                             </Button>
                         </div>

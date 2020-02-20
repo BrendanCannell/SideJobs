@@ -25,7 +25,8 @@ export default {
       return axios.post("/api/auth/signup", User);
     },
     findUser: function(User) {
-      return axios.get("/signin", User)
+      console.log(User)
+      return axios.post("api/auth/signin", User)
     },
     logoutUser: function(User) {
       return axios.get("/signout", User)

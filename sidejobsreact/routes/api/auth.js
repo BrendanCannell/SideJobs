@@ -19,12 +19,16 @@ router
     .post(auth.doRegister);
 
 // route to login page
-router.get('/signin', auth.login);
+router
+    .route('/signin')
+    .get(auth.login)
+    .post(auth.doLogin);
 
-// route for login action
-router.post('/signin', auth.doLogin);
 
 // route for logout action
-router.get('/signout', auth.logout);
+router
+    .route('signout')
+    .get(auth.logout);
+
 
 module.exports = router;

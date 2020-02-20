@@ -4,6 +4,9 @@
 /.pnp
 .pnp.js
 
+#sensitive info
+/passport/keys.js
+
 # testing
 /coverage
 
