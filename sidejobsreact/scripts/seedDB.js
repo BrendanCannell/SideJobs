@@ -3,10 +3,7 @@ const db = require("../models");
 // const db = require("../../../models");
 
 
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/sidejobdb"
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds113630.mlab.com:13630/heroku_2lpmjp0s");
 
 const jobsSeed = [
   {
