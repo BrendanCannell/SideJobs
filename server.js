@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"))
+}
+
 // mongoose.Promise = global.Promise;
 
 // mongoose.connect('mongodb://localhost/node-auth')
@@ -36,9 +40,7 @@ app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds113630.mlab.com:13630/heroku_2lpmjp0s");
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"))
-}
+
 
 // require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
