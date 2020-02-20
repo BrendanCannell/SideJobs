@@ -1,33 +1,48 @@
-
+  .wrapper{
+    padding-bottom: 5px;
+  }
   .ResultCardStyle {
-    margin: 10px 10px 20px 10px;
-    border-bottom: solid grey 1px;
+    margin: 10px 10px 0px 10px;
+    border: solid rgba(28, 28, 28, 0.509) .75px;
+    border-radius: 4px;
+    padding: 5px;
+    color: rgb(0, 38, 34);
+    background-color: rgba(223, 252, 248, 0.509);
+    font-family: Geneva, Verdana, sans-serif;
+
   }
   .topContainerStyle{
-    border-bottom: 1px solid grey;
-    padding: 15px 10px 15px 10px;
+    /* border-bottom: 1px solid grey; */
+    padding: 10px 10px 10px 10px;
+
+  }
+  .nameStyle{
+padding-right: 7px;
+  }
+  .emailStyle{
+    padding-right: 7px;
+
+  }
+  .phoneStyle{
 
   }
   .HeadingStyle{
-
+    font-size: 25px;
   }
   .ZipAndPriceStyle{
     display: flex;
     font-size: 15px;
+    /* padding-top: 3px; */
     color: rgb(110, 110, 110);
 }
   .TextStyle {
     padding-top: 5px;
 }
-  .ZipcodeStyle{
-
-  }
-
   .CostPerHour {
     padding-left: 10px;
   }
   .OverviewStyle{
-    margin-top: 5px;
+    /* margin-top: 5px; */
   }
   .OverviewHeaderStyle{
     padding: 5px 10px 5px 10px;
@@ -36,12 +51,37 @@
     font-size: 12px;
   }
   .ContactStyle{
-    border: .5px solid grey;
-    margin: 15px 10px 15px 10px;
+    border: .5px solid rgba(28, 28, 28, 0.242);
+    background-color: rgba(245, 245, 245, 0.413);
+    margin: 5px 5px 5px 5px;
     padding: 5px 10px 5px 10px;
     border-radius: 3px;
     font-size: 12px;
     display: flex;
 
+  }
+  @media only screen and (max-width: 375px) {
+    .ResultCardStyle{
+      padding: 5px;
+    }
+    .HeadingStyle{
+      font-size:15px;
+    }
+    .ZipAndPriceStyle{
+      font-size:10.5px;
+    }
+    .topContainerStyle{
+      font-size:15px;
+      padding-bottom: 0px;
+    }
+    .ContactStyle{
+      display: flex;
+      justify-content: space-around;
+      font-size:10px
+    }
+  .OverviewStyle{
+      font-size: 9.5px;
+
+    }
   }
  

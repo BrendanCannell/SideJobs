@@ -1,0 +1,28 @@
+.wrapper{
+    margin: 20px;
+}
+.submitForm{
+  background-color: white;
+  border-radius: 4px 0px 0px 4px;
+}
+.inputSubmit{
+    width: 84%;
+    border-radius: 0px 4px 4px 0px;
+    border: 1px solid #ccc;
+    padding:5px;
+
+}
+@media only screen and (max-width: 360px) {
+    .submitForm{
+        padding: 5px;
+        font-size: 12px;
+        height: 30px;
+      }
+      .inputSubmit{
+        height: 30px;
+      }
+  
+    .wrapper{
+        margin: 5px;
+    }
+  }

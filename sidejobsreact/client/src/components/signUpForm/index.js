@@ -7,12 +7,12 @@ import Card from 'react-bootstrap/Card'
 function SignUpForm(props) {
     return (
         <div className='signUpContainer'>
-            <Card>
-                <Form style={{margin: '20px'}}>
+            <Card style={{fontSize: '10px'}}>
+                <Form style={{margin: '20px', fontSize: '10px'}}>
                 <Form.Row>
                         <Form.Group>
                             <Form.Label>First Name</Form.Label>
-                            <Form.Control />
+                            <Form.Control className='input'/>
                         </Form.Group>
 
                         <Form.Group>

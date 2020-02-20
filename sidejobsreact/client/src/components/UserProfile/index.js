@@ -38,7 +38,7 @@ function UserProfileard(props) {
                         </Card.Body>
                     </Card>
                 </div>
-                <div className='userPostContainer'>
+                {/* <div className='userPostContainer'>
                     <Card style={{margin: '0px 0px 10px 0px' }}>
                         <Card.Body>
                         <Card.Title> {props.service} </Card.Title>
@@ -58,7 +58,7 @@ function UserProfileard(props) {
                             </div>
                         </Card.Body>
                     </Card>
-                </div>
+                </div> */}
             </div>
         </div>
 

@@ -11,9 +11,10 @@ import UserProfile from './pages/UserProfile';
 import Nav from "./components/Nav/index";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
+  // 'rgba(249, 119, 153, 0.235)'
   return (
     <Router>
-      <div>
+      <div className='wholeDiv' style={{backgroundColor: 'rgba(65, 179, 164, 0.461)'}}>
         <Nav />
         <Switch>
           <Route exact path="/" component={Results} />

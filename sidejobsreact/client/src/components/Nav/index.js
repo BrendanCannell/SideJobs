@@ -3,60 +3,48 @@ import {Link} from 'react-router-dom';
 import {
     Flex, Text, Box, Button
 } from 'rebass';
+import './style.css'
 // import SignUpButton from './';
 
 
-const NavBarStyle = {
-    padding: '8px',
-    paddingTop: '1px',
-    paddingBottom: '1px',
-    // font: 'montserrat'
-    // backgroundColor: '#EA0E96',
-    backgroundColor: '#E8406D',
-    fontSide: '50px'
-};
-// const SignUpButtonStyle = {
-//     color: '#1B1F3B',
-//     borderColor: '#1B1F3B',
-//     border: '20px',
-// };
+
 const SignInButtonStyle = {
-    backgroundColor: '#1B1F3B'
+   padding: '8px'
 };
-const NavFontStyle = {
-    fontSize: '40px',
-    color: 'white'
-};
+
+
 // const SignOutButtonStyle = {
 //     backgroundColor: '#1B1F3B'
 // };
 
 function NavBar() {
     return (
-        <Flex style={NavBarStyle}
-            px={2}
+        <Flex className='NavBarStyle'
+            // px={2}
             color='white'
-            bg='black'
             alignItems='center'>
             <Link to='/' style={{ textDecoration: 'none'}}>
-            <Text style={NavFontStyle} p={2} fontWeight='bold'>SideJobs</Text>
+            <Text className='NavFontStyle' p={2} fontWeight='bold'>SideJobs</Text>
             </Link>
             <Box mx='auto' />
+            <div className={['buttonDiv','p-8']}>
             <Link to='/signup'>
-            <Button style={SignInButtonStyle} variant="primary" mr={2}> 
+            <Button px={2} className='SignInButtonStyle' variant="primary" mr={2}> 
                 Sign Up 
             </Button>
             </Link>
             <Link to='/post'>
-            <Button style={SignInButtonStyle} variant="primary" mr={2}> 
+            <Button px={2}className='SignInButtonStyle' variant="primary" mr={2}> 
                 New Post 
             </Button>
             </Link>
             <Link to='/jobs'>
-            <Button style={SignInButtonStyle} variant="primary" mr={2}> 
-                Current Listings
+            <Button px={2}className='SignInButtonStyle' variant="primary" mr={2}> 
+                Listings
             </Button>
             </Link>
+            </div>
+           
            
             {/* <Link to="/signin">
                 <Button style={SignInButtonStyle} variant="primary" mr={2}>

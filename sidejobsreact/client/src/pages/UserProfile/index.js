@@ -22,12 +22,13 @@ class UserProfile extends Component {
   };
 
   render() {
-if(this.state.users.post) {
-  console.log(this.state.users.post.firstName, 'render')
-}
+// if(this.state.users.post) {
+//   console.log(this.state.users.post.firstName, 'render')
+// }
     return (
+
       <div>
-       {   this.state.users.post ?
+       {/* {   this.state.users.post ? */}
 
           <UserProfileCard
 
@@ -40,23 +41,24 @@ if(this.state.users.post) {
             // city={this.state.users.city}
             // state={this.state.users.state}
             password={this.state.users.password}
-          service={this.state.users.post.service}
-          description={this.state.users.post.description}
-          firstPost={this.state.users.post.firstName}
-          lastPost={this.state.users.post.lastName}
+          // service={this.state.users.post.service}
+          // description={this.state.users.post.description}
+          // firstPost={this.state.users.post.firstName}
+          // lastPost={this.state.users.post.lastName}
 
-          city={this.state.users.post.city}
-          zipCode={this.state.users.post.zipCode}
-          costPerHour={this.state.users.post.costPerHour}
-          phonePost={this.state.users.post.phoneNumber}
-
-
-
+          // city={this.state.users.post.city}
+          // zipCode={this.state.users.post.zipCode}
+          // costPerHour={this.state.users.post.costPerHour}
+          // phonePost={this.state.users.post.phoneNumber}
+          />
 
 
-          /> : null
-        }
-      </div>
+
+{/* 
+          // /> : null
+        // } */}
+        </div>
+
     )
 
   }

@@ -1,0 +1,61 @@
+
+
+.NavBarStyle {
+    padding: 10px;
+    background-color: rgb(65, 179, 164);
+    display: flex;
+}
+.SignInButtonStyle {
+    background-color: #1B1F3B;
+    padding: 2px;
+    margin: 10px
+}
+.NavFontStyle  {
+    font-size: 40px;
+    color: white;
+}
+@media only screen and (max-width: 500px) {
+    .NavBarStyle{
+        height: 90px;
+        font-size: 15px;
+    }
+    .SignInButtonStyle{
+        padding: 0px;
+    }
+    .NavFontStyle {
+        font-size: 30px;
+    }
+    .buttonDiv{
+        display: flex;
+        align-content: center;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .NavBarStyle{
+        height: 70px;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 5px;
+        padding: 2px;
+    }
+    .NavFontStyle {
+        font-size: 28px;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .NavBarStyle{
+        height: 70px;
+        font-size: 9px;
+        font-weight: bold;
+        margin: 5px;
+        padding: 2px;
+    }
+    .SignInButtonStyle{
+        height: 28px;
+    }
+    .NavFontStyle {
+        font-size: 25px;
+    }
+  }

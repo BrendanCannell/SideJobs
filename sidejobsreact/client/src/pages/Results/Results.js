@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from '../../utils/API';
+import './style.css'
 import JobCard from '../../components/Card';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
@@ -50,12 +51,14 @@ class Results extends Component {
     render() {
         return (
             <div>
-                <div style={{ margin: '20px' }}>
+                <div className='wrapper'>
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
-                            <Button onClick={this.handleFormSubmit} variant="outline-secondary">Search</Button>
-                        </InputGroup.Prepend>
-                        <FormControl name='jobSearch' value={this.state.jobSearch}
+                            <Button bsPrefix='submitForm' onClick={this.handleFormSubmit} variant="outline-secondary">Search</Button>
+                        </InputGroup.Prepend >
+                        <FormControl  
+                        bsPrefix='inputSubmit'
+                        name='jobSearch' value={this.state.jobSearch}
                             onChange={this.handleInputChange} 
                             onKeyPress={this.onKeyPress}/>
                     </InputGroup>
